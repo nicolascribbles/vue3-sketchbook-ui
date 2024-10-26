@@ -1,0 +1,44 @@
+{
+  "name": "@nicolascribbles/sketchbook-ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/sketchbook-ui-library.umd.cjs",
+  "module": "./dist/sketchbook-ui-library.js",
+  "exports": {
+    ".": {
+      "import": "./dist/sketchbook-ui-library.js",
+      "require": "./dist/sketchbook-ui-library.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "typings": "./dist/src/lib.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode library && npm run type-check",
+    "type-check": "vue-tsc --build --verbose",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@kitbag/router": "^0.10.1",
+    "gsap": "^3.12.5",
+    "lil-gui": "^0.19.2",
+    "three": "^0.169.0",
+    "vue": "^3.4.37"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.9",
+    "@types/node": "^22.7.3",
+    "@types/three": "^0.169.0",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vue-tsc": "^2.0.29"
+  }
+}
